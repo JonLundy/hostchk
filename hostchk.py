@@ -4,11 +4,11 @@ import socket, json, subprocess
 import urllib.request
 
 hostname = socket.gethostbyaddr(socket.gethostname())[0]
-collector_host = 'http://expm.hrit.utah.edu/collector?ident=' + hostname
 
 with open('config.json') as f:
   config = json.loads(f.read())
 
+collector_host = config['collector'] + hostname
 token = config['token']
 host_cfg = []
 if hostname in config['hosts']: 
