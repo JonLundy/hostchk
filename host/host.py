@@ -17,6 +17,6 @@ print(json.dumps({
     },
     'swap' : {
         'total' : str(psutil.swap_memory().total),
-        'availble'  : str(psutil.swap_memory().free),  
+        'available'  : str(psutil.swap_memory().free),  
     }  
 }))
